@@ -8,6 +8,11 @@
   "platformCommit": "enabled",
   "rebaseWhen": "behind-base-branch",
   "rollbackPrs": true,
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "deps",
+  "semanticCommitType": "feat",
+  "osvVulnerabilityAlerts": true,
+  "dependencyDashboardOSVVulnerabilitySummary": "all",
   "vulnerabilityAlerts": {
     "commitMessagePrefix": "[SECURITY] ",
     "enabled": true,
@@ -16,5 +21,15 @@
   },
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    }
+  ]
 }
