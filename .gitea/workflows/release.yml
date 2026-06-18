@@ -24,7 +24,7 @@ jobs:
       clean_changelog: ${{ steps.get_next_version.outputs.clean_changelog }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@v7.0.0
         with:
           fetch-depth: 0
 
@@ -79,7 +79,7 @@ jobs:
       release_name: ${{ steps.create_release_job.outputs.tag }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@v7.0.0
         with:
           fetch-depth: 0
 
