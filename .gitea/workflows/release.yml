@@ -10,9 +10,9 @@ jobs:
     uses: https://git.tainton.uk/actions/gha-workflows/.gitea/workflows/ci-python-uv-with-docker.yml@main
     with:
       python-version: 3.13
-    secrets:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    # secrets:
+    #   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    #   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
   get_next_release:
     name: Get Next Release
